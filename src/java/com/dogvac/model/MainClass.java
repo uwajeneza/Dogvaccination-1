@@ -7,6 +7,7 @@ package com.dogvac.model;
 
 import com.dogvac.controler.GeneralDao;
 import com.dogvac.intities.Actors;
+import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -17,27 +18,53 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 @ManagedBean(name = "Main")
 public class MainClass {
-    Actors mn  = new Actors();
-    GeneralDao<Actors> mnDao = new GeneralDao<>(Actors.class);
-    
-    private String username;
-    private String password;
-    
+private Actors mn  = new Actors();
+private GeneralDao<Actors> mnDao = new GeneralDao<>(Actors.class);
+private auth au = new auth();
 
     public Actors getMn() {
         return mn;
     }
 
-    public GeneralDao<Actors> getMnDao() {
-        return mnDao;
+    public List<Actors> getMnDao() {
+        return mnDao.listAll();
     }
 
+    public void setMn(Actors mn) {
+        this.mn = mn;
+    }
+    
+    
+
+    public auth getAu() {
+        return au;
+    }
+
+    public void setAu(auth au) {
+        this.au = au;
+    }
+
+    
+
+   
+    
+
+    
     public String login(){
+        String enterusername=au.getUsername();
+        System.out.println(enterusername);
+        String enterpassword=au.getPassword();
+        System.out.println(enterpassword);
+        
+        Actors ab = mnDao.findByINT_PK(enterusername);
+        String actorPassword =ab.getUserPassword();
+        String actorUsername = ab.getUserfirstNames();
+        System.out.println(actorUsername+" - "+actorPassword);
        
-        if (username.equals("mike") && password.equals("123")) {
-             return "saved"; 
+        if ( enterpassword.equals(actorPassword )) {
+             return "main"; 
         } else {
-            return " Wrong passowrd or Username ";
+            return "Wrong passowrd or Username ";
         }
     }
     
