@@ -17,11 +17,12 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 @ManagedBean(name = "Main")
 public class MainClass {
+    Actors mn  = new Actors();
+    GeneralDao<Actors> mnDao = new GeneralDao<>(Actors.class);
+    
     private String username;
     private String password;
     
-    Actors mn  = new Actors();
-    GeneralDao<Actors> mnDao = new GeneralDao<>(Actors.class);
 
     public Actors getMn() {
         return mn;
@@ -32,9 +33,9 @@ public class MainClass {
     }
 
     public String login(){
-    
-        if (username.equals(mn.getUserfirstNames()) && password.equals(mn.getUserPassword())) {
-             return "home"; 
+       
+        if (username.equals("mike") && password.equals("123")) {
+             return "saved"; 
         } else {
             return " Wrong passowrd or Username ";
         }
