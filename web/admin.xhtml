@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="UserEmail:" for="userEmail" />
+                    <h:inputText id="userEmail" value="#{admin.actorstest.userEmail}" title="UserEmail" />
+                    <h:outputLabel value="UserfirstNames:" for="userfirstNames" />
+                    <h:inputText id="userfirstNames" value="#{admin.actorstest.userfirstNames}" title="UserfirstNames" />
+                    <h:outputLabel value="UserSecondNames:" for="userSecondNames" />
+                    <h:inputText id="userSecondNames" value="#{admin.actorstest.userSecondNames}" title="UserSecondNames" />
+                    <h:outputLabel value="UserAdress:" for="userAdress" />
+                    <h:inputText id="userAdress" value="#{admin.actorstest.userAdress}" title="UserAdress" />
+                    <h:outputLabel value="UserPassword:" for="userPassword" />
+                    <h:inputText id="userPassword" value="#{admin.actorstest.userPassword}" title="UserPassword" />
+                    <h:outputLabel value="UserType:" for="userType" />
+                    <h:inputText id="userType" value="#{admin.actorstest.userType}" title="UserType" />
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+
+
+    </h:body>
+</html>
+
