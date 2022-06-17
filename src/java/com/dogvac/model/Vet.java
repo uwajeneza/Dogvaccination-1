@@ -11,6 +11,8 @@ package com.dogvac.model;
  */
 public class Vet {
     
+
     private  String mike;
+
     
 }
