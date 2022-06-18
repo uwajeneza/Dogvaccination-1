@@ -70,7 +70,7 @@ private auth au = new auth();
         String actorUsername = ab.getUserEmail();
         String actorpass = ab2.getUserPassword();
       //  System.out.println(actorUsername+" - "+actorPassword);
-       
+      
         if ( enterusernameMail.equals(actorUsername) && enterpassword.equals(actorpass)) {
              return "main"; 
         } else {
@@ -88,14 +88,14 @@ private auth au = new auth();
         //Actors users = (Actors) mnDao.findByINT_PK(Email);
         //Actors userspss = (Actors) mnDao.findByINT_PK(password);
         //if(users.getUserEmail().equals(Email)&& userspss.getUserPassword().equals(password)) {
-            return "main";
-        }
+           // return "main";
+        //}
         return "no user";
     
         
-        
-    
     }
-    
-    
 }
+    
+    
+    
+

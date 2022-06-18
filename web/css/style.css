@@ -401,10 +401,11 @@ a:focus {
 /* contact section */
 
 .contact_section {
-  background-image: url(../images/orange-dish.png);
+  background-image: url(../images/4.jpg);
   background-repeat: no-repeat;
-  background-size: 215px;
-  background-position: right center;
+  background-size: contain;
+  
+  background-position: 900px;
 }
 
 .contact_section input {

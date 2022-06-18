@@ -5,7 +5,8 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Login</title>
-           <!-- slider stylesheet -->
+        
+        <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 
@@ -17,15 +18,15 @@
    Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-
+  <link href="css/responsive.css" rel="stylesheet" />   
+        
     </h:head>
     <h:body>
         
-         <header class="header_section">
+           <header class="header_section">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-          <a class="navbar-brand" href="home.xhtml">
+          <a class="navbar-brand" href="Home.xhtml">
             <span>
              Dog Vacc
             </span>
@@ -39,31 +40,29 @@
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="home.xhtml">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="Home.xhtml">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="fruit.html"> Symptom Checker</a>
+                  <a class="nav-link" href="check.xhtml"> Symptom Checker</a>
                 </li>
                 
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact us</a>
+                  <a class="nav-link" href="contacts.xhtml">Contact us</a>
                 </li>
               </ul>
               
-                
+                <li class="nav-item">
+                      <h:outputLabel  value="Hi, #{Main.au.userMail} " class="nav-link" />
+                </li>
+              </ul>
+              
                
             </div>
-            <div class="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
             
-                  <a href="login.xhtml">Login</a>
-              
-            </div>
           </div>
         </nav>
       </div>
    </header> 
-        
-        
 
         
     </h:body>

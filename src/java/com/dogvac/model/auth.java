@@ -5,10 +5,13 @@
  */
 package com.dogvac.model;
 
+import javax.faces.bean.ManagedBean;
+
 /**
  *
  * @author mike
  */
+@ManagedBean(name = "au")
 public class auth {
     
      private String userMail;

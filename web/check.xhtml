@@ -1,12 +1,170 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Facelet Title</title>
+        <title>Symptom Checker</title>
+        
+      <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+ <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet" />
+   Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />  
+        <style>
+      .slider_section{
+          background-image: url("images/pup.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position-x: px;  
+      }
+      .slider_item-detail{
+          padding-bottom: 50px;   
+      }
+      .slider_item-detail{
+          
+          padding-bottom: 250px;
+          color: #fc5d35;
+          
+      }
+      .contact_form-container{
+          padding-bottom:15px ;
+          padding-top: 15px; 
+          
+          padding-left: 170px;
+          padding-right: 170px;
+           border: #ffffff;
+      }
+      .contact_form-container2{
+          padding-bottom:15px ;
+          padding-top: 15px; 
+          
+          padding-left: 170px;
+          padding-right: 170px;
+          
+          border: #ffffff;
+      }
+      .containermenu{
+          padding-top: 70px;
+          
+      }
+  </style>
+        
     </h:head>
     <h:body>
-        Hello from Facelets
+        
+        <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="Home.xhtml">
+            <span>
+             Dog Vacc
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="Home.xhtml">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="check.xhtml"> Symptom Checker</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="contacts.xhtml">Contact us</a>
+                </li>
+              
+              
+                <li class="nav-item">
+                      <h:outputLabel  value="Hi, #{Main.au.userMail} " class="nav-link" />
+                </li>
+              </ul>
+              
+               
+            </div>
+            <div class="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
+            
+                  <a href="login.xhtml">LogOut</a>
+                 
+            </div>
+          </div>
+        </nav>
+      </div>
+   </header>  
+        
+          <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="slider_item-box">
+              <div class="slider_item-container">
+                <div class="container">
+                  <div class="row">
+                   
+                      <div class="slider_item-detail">
+                        
+                            <center>
+                          <h1>
+                            Symptoms Checker 
+                          </h1>
+                              <div class="containermenu">
+                                  
+                                <h:selectOneMenu value="" class="contact_form-container">
+                                    <f:selectItem itemValue="Femine" class="font-weight-bold"/>
+                                    <f:selectItem itemValue="Canine" class="font-weight-bold"/>
+                                </h:selectOneMenu> 
+                                <h:selectOneMenu value="" class="contact_form-container2">
+                                    <f:selectItem itemValue="Head" class="font-weight-bold"/>
+                                    <f:selectItem itemValue="Bleed" class="font-weight-bold"/>
+                                    <f:selectItem itemValue="Vomiting" class="font-weight-bold"/>
+                                    <f:selectItem itemValue="Eyes" class="font-weight-bold"/>
+                                </h:selectOneMenu> 
+                                 
+                               </div>
+                            </center>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- end slider section -->
+        
+    
+  <!-- service section -->
+
+  <section class="service_section layout_padding ">
+    <div class="container">
+        <h2> Result from select</h2>
+    </div>
+  </section>
+
+  <!-- end service section -->
+    
+    
     </h:body>
 </html>
 
