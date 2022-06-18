@@ -11,23 +11,25 @@ package com.dogvac.model;
  */
 public class auth {
     
-     private String username;
+     private String userMail;
      private String password;
 
     public auth() {
     }
 
-    public auth(String username, String password) {
-        this.username = username;
+    public auth(String userMail, String password) {
+        this.userMail = userMail;
         this.password = password;
     }
 
-    public String getUsername() {
-        return username;
+     
+     
+    public String getUserMail() {
+        return userMail;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserMail(String userMail) {
+        this.userMail = userMail;
     }
 
     public String getPassword() {
@@ -37,7 +39,8 @@ public class auth {
     public void setPassword(String password) {
         this.password = password;
     }
-     
+
+   
      
     
 }

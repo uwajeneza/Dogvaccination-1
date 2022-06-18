@@ -44,46 +44,51 @@ private auth au = new auth();
         this.au = au;
     }
 
+    public String signupPage(){
     
+    return "signup";
+    }
 
    public String uSerCreate(){
-   
-   
-   
-   return "";
+     
+       mnDao.create(mn);
+    
+   return "main";
    }
     
 
     
- /*   public String login(){
-        String enterusername=au.getUsername();
-        System.out.println(enterusername);
+   public String ULogin(){
+        String enterusernameMail=au.getUserMail();
+      //  System.out.println(enterusername);
         String enterpassword=au.getPassword();
-        System.out.println(enterpassword);
+     //   System.out.println(enterpassword);
         
-        Actors ab = mnDao.findByINT_PK(enterusername);
-        String actorPassword =ab.getUserPassword();
-        String actorUsername = ab.getUserfirstNames();
-        System.out.println(actorUsername+" - "+actorPassword);
+        Actors ab = mnDao.findBySTRING_PK(enterusernameMail);
+       // String actorPassword =ab.getUserPassword();
+        String actorUsername = ab.getUserEmail();
+        String actorpass = ab.getUserPassword();
+      //  System.out.println(actorUsername+" - "+actorPassword);
        
-        if ( enterpassword.equals(actorPassword )) {
+        if ( enterusernameMail.equals(actorUsername) && enterpassword.equals(actorpass)) {
              return "main"; 
         } else {
             return "Wrong passowrd or Username ";
         }
     }
-    */
     
     
-    public String UserLogin(Actors act){
+    
+   /* public String UserLogin(Actors act){
     
         
         String Email = mn.getUserEmail();
         String password = mn.getUserPassword();
         Actors users = (Actors) mnDao.findBySTRING_PK(Email);
         
-        if(users.getUserPassword().equals(password)){
-            return "index";
+        Actors userspss = (Actors) mnDao.findBySTRING_PK(password);
+        if(users.getUserEmail().equals(Email)&& userspss.getUserPassword().equals(userspss)) {
+            return "main";
         }
         return "no user";
     
@@ -91,6 +96,6 @@ private auth au = new auth();
         
     
     }
-    
+    */
     
 }
