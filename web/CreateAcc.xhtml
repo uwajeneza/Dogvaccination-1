@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
         
@@ -280,7 +281,17 @@ input[type=text]:placeholder {
 * {
   box-sizing: border-box;
 }
-            
+       
+.contact_form-container{
+          background-color: #fff;
+         border-bottom: 2px solid #5fbae9;
+         padding-bottom:25px ;
+          padding-top: 25px; 
+          
+          padding-left: 50px;
+          padding-right: 50px;
+           border: #ffffff;
+      }
         </style>
     </h:head>
     <h:body>
@@ -288,40 +299,71 @@ input[type=text]:placeholder {
         <div class="wrapper fadeInDown">
   <div id="formContent">
     <!-- Tabs Titles -->
-    <h2 class="active"> Sign In </h2>
-    <h2 class="inactive"><a href="CreateAcc.xhtml">Create Account</a></h2>
+    <h2 class="active"> Create Account</h2>
+    <h2 class="inactive"><a href="signup.xhtml">Sign</a></h2>
     <h2 class="inactive"><a href="Home.xhtml">Home</a></h2>
     
 
     <!-- Icon -->
-    <div class="fadeIn first">
-        <p>Dog Vacc</p>
-    </div>
+    
 
     <!-- Login Form -->
-    <h:form>
+     <h:form>
             <div class="contact_form-container">
               <div>
-                  <h:outputLabel value="Email"/>
+                  <h:outputLabel value="First Name"/>
                 <div>
-                    <h:inputText  value="#{Main.au.userMail}"  label="Names" required="true" requiredMessage="fill email"/>
+                    <h:inputText  value="#{Main.mn.userfirstNames}"  label="Names" required="true" requiredMessage="fill email"/>
                 </div>
-                    <h:outputLabel value="Password"/><div>
-                    <h:inputText value="#{Main.au.password}"  requiredMessage="fill Password" />
+                    <h:outputLabel value="Second Name"/>
+                    <div>
+                        <h:inputText value="#{Main.mn.userSecondNames}"  requiredMessage="fill Password" />
                 </div>
+               
+                    <h:outputLabel value="Email"/>
+                    <div>
+                        <h:inputText value="#{Main.mn.userEmail}"  requiredMessage="fill Password" />
+                </div>
+                
+                    <h:outputLabel value="Home Adress"/>
+                    <div>
+                        <h:inputText value="#{Main.mn.userAdress}"  requiredMessage="fill Password" />
+                </div>
+               
+                    <h:outputLabel value="Role"/>
+                    <div class="containermenu">
+                                  
+                        <h:selectOneMenu value="#{Main.mn.userType}" class="contact_form-container">
+                                    <f:selectItem itemValue="Vet" class="font-weight-bold"/>
+                                    <f:selectItem itemValue="Dog Owner" class="font-weight-bold"/>
+                                </h:selectOneMenu> 
+                </div>
+              
+                    <h:outputLabel value="Password"/>
+                    <div>
+                        <h:inputText value="#{Main.mn.userPassword}"  requiredMessage="fill Password" />
+                </div>
+                
+                    <h:outputLabel value="Confirm Password"/>
+                    <div>
+                        <h:inputText value="#{Main.mn.userPassword}"  requiredMessage="fill Password" />
+                    </div>
                 <div class="col-md-8 mr-auto">
                     
                     <center>
                          <div class="grid-container">
-                             <div> <h:commandButton value="Login" action="#{Main.ULogin()}"/></div>
+                            
+                             <div> <h:commandButton value="Create New Account" action="#{Main.uSerCreate()}"/></div>
                          </div>
                     </center>
                 
               </div>
-
+              </div>
+        
             </div>
-            </div>
-            </h:form>   
+            
+            
+            </h:form> 
 
     <!-- Remind Passowrd -->
     <div id="formFooter">

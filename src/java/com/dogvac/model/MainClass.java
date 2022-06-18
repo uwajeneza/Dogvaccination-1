@@ -46,14 +46,14 @@ private auth au = new auth();
 
     public String signupPage(){
     
-    return "signup";
+    return "CreateAcc";
     }
 
    public String uSerCreate(){
      
        mnDao.create(mn);
     
-   return "main";
+   return "signup";
    }
     
 
@@ -72,7 +72,7 @@ private auth au = new auth();
       //  System.out.println(actorUsername+" - "+actorPassword);
       
         if ( enterusernameMail.equals(actorUsername) && enterpassword.equals(actorpass)) {
-             return "main"; 
+             return "Home"; 
         } else {
             return "Wrong passowrd or Username ";
         }
