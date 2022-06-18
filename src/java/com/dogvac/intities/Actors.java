@@ -21,7 +21,7 @@ public class Actors {
     private String userAdress;
     private String userPassword;
     private String userType;
-
+    
     public Actors() {
     }
 

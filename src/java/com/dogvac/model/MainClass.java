@@ -46,11 +46,16 @@ private auth au = new auth();
 
     
 
+   public String uSerCreate(){
    
+   
+   
+   return "";
+   }
     
 
     
-    public String login(){
+ /*   public String login(){
         String enterusername=au.getUsername();
         System.out.println(enterusername);
         String enterpassword=au.getPassword();
@@ -67,10 +72,25 @@ private auth au = new auth();
             return "Wrong passowrd or Username ";
         }
     }
+    */
     
     
+    public String UserLogin(Actors act){
     
+        
+        String Email = mn.getUserEmail();
+        String password = mn.getUserPassword();
+        Actors users = (Actors) mnDao.findBySTRING_PK(Email);
+        
+        if(users.getUserPassword().equals(password)){
+            return "index";
+        }
+        return "no user";
     
+        
+        
+    
+    }
     
     
 }
