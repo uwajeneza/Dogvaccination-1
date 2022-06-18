@@ -3,15 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/mike/Documents/NetBeansProjects/Dogvaccination/web/admin.xhtml</file>
-            <file>file:/C:/Users/mike/Documents/NetBeansProjects/Dogvaccination/src/java/com/dogvac/model/Admin.java</file>
             <file>file:/C:/Users/mike/Documents/NetBeansProjects/Dogvaccination/src/java/com/dogvac/intities/Actors.java</file>
-            <file>file:/C:/Users/mike/Documents/NetBeansProjects/Dogvaccination/src/java/com/dogvac/intities/Vaccination.java</file>
-            <file>file:/C:/Users/mike/Documents/NetBeansProjects/Dogvaccination/src/java/com/dogvac/model/Vet.java</file>
-            <file>file:/C:/Users/mike/Documents/NetBeansProjects/Dogvaccination/web/UserAccount.xhtml</file>
-            <file>file:/C:/Users/mike/Documents/NetBeansProjects/Dogvaccination/src/java/hibernate.cfg.xml</file>
-            <file>file:/C:/Users/mike/Documents/NetBeansProjects/Dogvaccination/src/java/com/dogvac/model/StandUsers.java</file>
-            <file>file:/C:/Users/mike/Documents/NetBeansProjects/Dogvaccination/src/java/com/dogvac/intities/Dog.java</file>
+            <file>file:/C:/Users/mike/Documents/NetBeansProjects/Dogvaccination/web/home.html</file>
+            <file>file:/C:/Users/mike/Documents/NetBeansProjects/Dogvaccination/web/main.xhtml</file>
+            <file>file:/C:/Users/mike/Documents/NetBeansProjects/Dogvaccination/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/mike/Documents/NetBeansProjects/Dogvaccination/src/java/com/dogvac/controler/GeneralDao.java</file>
+            <file>file:/C:/Users/mike/Documents/NetBeansProjects/Dogvaccination/web/index.html</file>
+            <file>file:/C:/Users/mike/Documents/NetBeansProjects/Dogvaccination/src/java/com/dogvac/model/auth.java</file>
+            <file>file:/C:/Users/mike/Documents/NetBeansProjects/Dogvaccination/web/login.xhtml</file>
             <file>file:/C:/Users/mike/Documents/NetBeansProjects/Dogvaccination/src/java/com/dogvac/model/MainClass.java</file>
         </group>
     </open-files>
