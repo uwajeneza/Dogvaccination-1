@@ -64,10 +64,11 @@ private auth au = new auth();
         String enterpassword=au.getPassword();
      //   System.out.println(enterpassword);
         
-        Actors ab = mnDao.findBySTRING_PK(enterusernameMail);
+       Actors ab = mnDao.findBySTRING_PK(enterusernameMail);
+        Actors ab2 = mnDao.findBySTRING_PK(enterpassword);
        // String actorPassword =ab.getUserPassword();
         String actorUsername = ab.getUserEmail();
-        String actorpass = ab.getUserPassword();
+        String actorpass = ab2.getUserPassword();
       //  System.out.println(actorUsername+" - "+actorPassword);
        
         if ( enterusernameMail.equals(actorUsername) && enterpassword.equals(actorpass)) {
@@ -79,15 +80,14 @@ private auth au = new auth();
     
     
     
-   /* public String UserLogin(Actors act){
+    public String UserLogin(Actors act){
     
         
-        String Email = mn.getUserEmail();
-        String password = mn.getUserPassword();
-        Actors users = (Actors) mnDao.findBySTRING_PK(Email);
-        
-        Actors userspss = (Actors) mnDao.findBySTRING_PK(password);
-        if(users.getUserEmail().equals(Email)&& userspss.getUserPassword().equals(userspss)) {
+        //String Email = au.getUserMail();
+        //String password =au.getPassword();
+        //Actors users = (Actors) mnDao.findByINT_PK(Email);
+        //Actors userspss = (Actors) mnDao.findByINT_PK(password);
+        //if(users.getUserEmail().equals(Email)&& userspss.getUserPassword().equals(password)) {
             return "main";
         }
         return "no user";
@@ -96,6 +96,6 @@ private auth au = new auth();
         
     
     }
-    */
+    
     
 }
