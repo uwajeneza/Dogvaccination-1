@@ -37,12 +37,36 @@ private auth au = new auth();
       
         return "fatching done";
     }
+    public String fet(){
+        
+        try {
+         au.setPassword("123");
+        au.setUserMail("mike@gmail.com");
+            String enterusernameMail=au.getUserMail();      
+            String enteruserPss=au.getPassword();
+            
+           Actors ab = mnDao.findBySTRING_PK(enterusernameMail);
+           Actors ab2 = mnDao.findBySTRING_PK(enteruserPss);
+       
+        String actorUsername = ab.getUserEmail();
+      //  String actorUserpass = ab2.getUserPassword();
+        
+        
+       System.out.println("Username is :" + actorUsername);
+      // System.out.println("Password is :" + actorUserpass);
+    return "ok";   
+        } catch (Exception e) {
+            return "lost";
+        }
+        
+    }
     
-    
+   
      public static void main(String[] args) {
          test test =new test();
-         
          System.out.println(test.ULogin());
+         System.out.println(test.fet());
+        
      }
     
 }

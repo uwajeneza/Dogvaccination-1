@@ -8,8 +8,12 @@ package com.dogvac.model;
 import com.dogvac.controler.GeneralDao;
 import com.dogvac.intities.Actors;
 import java.util.List;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
+import javax.faces.view.facelets.Facelet;
+import javax.faces.view.facelets.FaceletContext;
 
 /**
  *
@@ -59,23 +63,25 @@ private auth au = new auth();
 
     
    public String ULogin(){
-        String enterusernameMail=au.getUserMail();
-      //  System.out.println(enterusername);
-        String enterpassword=au.getPassword();
-     //   System.out.println(enterpassword);
+        try {
+           String enterusernameMail=au.getUserMail();
+      
         
        Actors ab = mnDao.findBySTRING_PK(enterusernameMail);
-        Actors ab2 = mnDao.findBySTRING_PK(enterpassword);
-       // String actorPassword =ab.getUserPassword();
+       
         String actorUsername = ab.getUserEmail();
-        String actorpass = ab2.getUserPassword();
-      //  System.out.println(actorUsername+" - "+actorPassword);
+    
       
-        if ( enterusernameMail.equals(actorUsername) && enterpassword.equals(actorpass)) {
+        if ( enterusernameMail.equals(actorUsername)) {
              return "Home"; 
         } else {
             return "Wrong passowrd or Username ";
         }
+       } catch (Exception e) {
+            FacesMessage message =new  FacesMessage("Create An account");
+            FacesContext.getCurrentInstance().addMessage(null, message);
+            return "CreateAcc";
+       }
     }
     
     

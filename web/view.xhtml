@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="List"/></h1>
+                <h:dataTable value="#{Main.mnDao}" var="item">
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="UserEmail"/>
+                        </f:facet>
+                        <h:outputText value="#{item.userEmail}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="UserfirstNames"/>
+                        </f:facet>
+                        <h:outputText value="#{item.userfirstNames}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="UserSecondNames"/>
+                        </f:facet>
+                        <h:outputText value="#{item.userSecondNames}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="UserAdress"/>
+                        </f:facet>
+                        <h:outputText value="#{item.userAdress}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="UserPassword"/>
+                        </f:facet>
+                        <h:outputText value="#{item.userPassword}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="UserType"/>
+                        </f:facet>
+                        <h:outputText value="#{item.userType}"/>
+                    </h:column>
+                </h:dataTable>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+
