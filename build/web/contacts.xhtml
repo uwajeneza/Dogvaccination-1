@@ -77,20 +77,20 @@
             <div class="contact_form-container">
               <div>
                 <div>
-                    <h:inputText   label="Names" required="true" requiredMessage="fill Names"/>
+                    <h:inputText value="#{mail.names}"  label="Names" required="true" requiredMessage="fill Names"/>
                 </div>
                 <div>
-                    <h:inputText  label="Phone Number" requiredMessage="fill Phone" />
+                    <h:inputText value="#{mail.phone}"  label="Phone Number" requiredMessage="fill Phone" />
                 </div>
                 <div>
-                    <h:inputText  label="Email" />
+                    <h:inputText value="#{mail.email}"  label="Email" />
                 </div>
 
                 <div class="mt-5">
-                    <h:inputText  label="Message" requiredMessage="fill message"/>
+                    <h:inputText value="#{mail.subject}"  label="Message" requiredMessage="fill message"/>
                 </div>
                 <div class="mt-5">
-                    <h:commandButton value="send" action="ee"/>
+                    <h:commandButton value="send" action="#{mail.sendMail()}"/>
                     
                  
                 </div>
