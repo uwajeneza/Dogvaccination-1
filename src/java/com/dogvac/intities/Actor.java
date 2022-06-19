@@ -12,8 +12,8 @@ import javax.persistence.Id;
  *
  * @author mike
  */
-@Entity
-public class Actors {
+@Entity(name = "Actors")
+public class Actor {
     @Id
     private String userEmail;
     private String userfirstNames;
@@ -22,17 +22,17 @@ public class Actors {
     private String userPassword;
     private String userConfrimPassword;
     private String userType;
-    
-    
-    public Actors() {
+
+    public Actor() {
     }
 
-    public Actors(String userEmail, String userfirstNames, String userSecondNames, String userAdress, String userPassword, String userType) {
+    public Actor(String userEmail, String userfirstNames, String userSecondNames, String userAdress, String userPassword, String userConfrimPassword, String userType) {
         this.userEmail = userEmail;
         this.userfirstNames = userfirstNames;
         this.userSecondNames = userSecondNames;
         this.userAdress = userAdress;
         this.userPassword = userPassword;
+        this.userConfrimPassword = userConfrimPassword;
         this.userType = userType;
     }
 
@@ -84,8 +84,6 @@ public class Actors {
         this.userConfrimPassword = userConfrimPassword;
     }
 
-    
-    
     public String getUserType() {
         return userType;
     }
@@ -95,6 +93,7 @@ public class Actors {
     }
     
     
+   
     
     
     

@@ -43,13 +43,13 @@ Contributor(s):
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/dogvaccination?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/dogvacc?l</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.hbm2ddl.auto">update</property>
-    <mapping class="com.dogvac.intities.Vaccination"/>
-    <mapping class="com.dogvac.intities.Dog"/>
     <mapping class="com.dogvac.intities.Disease"/>
-    <mapping class="com.dogvac.intities.Actors"/>
+    <mapping class="com.dogvac.intities.Dog"/>
+    <mapping class="com.dogvac.intities.Vaccination"/>
+    <mapping class="com.dogvac.intities.Actor"/>
   </session-factory>
 </hibernate-configuration>

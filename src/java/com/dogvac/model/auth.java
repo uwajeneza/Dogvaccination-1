@@ -5,7 +5,10 @@
  */
 package com.dogvac.model;
 
+import com.dogvac.intities.Actor;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
 
 /**
  *
@@ -44,6 +47,13 @@ public class auth {
     }
 
    
+    
+    
+  
+    
+    
+    
+    
      
     
 }

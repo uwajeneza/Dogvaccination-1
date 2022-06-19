@@ -6,7 +6,7 @@
 package com.dogvac.model;
 
 import com.dogvac.controler.GeneralDao;
-import com.dogvac.intities.Actors;
+import com.dogvac.intities.Actor;
 import java.util.List;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -22,19 +22,21 @@ import javax.faces.view.facelets.FaceletContext;
 @SessionScoped
 @ManagedBean(name = "Main")
 public class MainClass {
-private Actors mn  = new Actors();
-private GeneralDao<Actors> mnDao = new GeneralDao<>(Actors.class);
+private Actor mn  = new Actor();
+private GeneralDao<Actor> mnDao = new GeneralDao<>(Actor.class);
 private auth au = new auth();
 
-    public Actors getMn() {
+    public Actor getMn() {
         return mn;
     }
 
-    public List<Actors> getMnDao() {
+    
+
+    public List<Actor> getMnDao() {
         return mnDao.listAll();
     }
 
-    public void setMn(Actors mn) {
+    public void setMn(Actor mn) {
         this.mn = mn;
     }
     
@@ -54,8 +56,18 @@ private auth au = new auth();
     }
 
    public String uSerCreate(){
-     
-       mnDao.create(mn);
+       if(mn.getUserPassword().equals(mn.getUserConfrimPassword())){
+          
+         mnDao.create(mn);
+          FacesMessage message =new  FacesMessage("Creation Successful");
+          FacesContext.getCurrentInstance().addMessage(null, message);
+          return "signup";
+       }else{
+            FacesMessage message =new  FacesMessage("Password not much");
+            FacesContext.getCurrentInstance().addMessage(null, message);
+            return "CreateAcc";
+        }
+       
     
    return "signup";
    }
@@ -65,13 +77,11 @@ private auth au = new auth();
    public String ULogin(){
         try {
            String enterusernameMail=au.getUserMail();
-      
-        
-       Actors ab = mnDao.findBySTRING_PK(enterusernameMail);
+           
+       Actor ab = mnDao.findBySTRING_PK(enterusernameMail);
        
         String actorUsername = ab.getUserEmail();
-    
-      
+        
         if ( enterusernameMail.equals(actorUsername)) {
              return "Home"; 
         } else {
@@ -86,20 +96,7 @@ private auth au = new auth();
     
     
     
-    public String UserLogin(Actors act){
-    
-        
-        //String Email = au.getUserMail();
-        //String password =au.getPassword();
-        //Actors users = (Actors) mnDao.findByINT_PK(Email);
-        //Actors userspss = (Actors) mnDao.findByINT_PK(password);
-        //if(users.getUserEmail().equals(Email)&& userspss.getUserPassword().equals(password)) {
-           // return "main";
-        //}
-        return "no user";
-    
-        
-    }
+   
 }
     
     
