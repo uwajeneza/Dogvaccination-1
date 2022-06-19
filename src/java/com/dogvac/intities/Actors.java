@@ -20,7 +20,9 @@ public class Actors {
     private String userSecondNames;
     private String userAdress;
     private String userPassword;
+    private String userConfrimPassword;
     private String userType;
+    
     
     public Actors() {
     }
@@ -74,6 +76,16 @@ public class Actors {
         this.userPassword = userPassword;
     }
 
+    public String getUserConfrimPassword() {
+        return userConfrimPassword;
+    }
+
+    public void setUserConfrimPassword(String userConfrimPassword) {
+        this.userConfrimPassword = userConfrimPassword;
+    }
+
+    
+    
     public String getUserType() {
         return userType;
     }
