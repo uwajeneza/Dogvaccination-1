@@ -25,6 +25,15 @@ public class MainClass {
 private Actors mn  = new Actors();
 private GeneralDao<Actors> mnDao = new GeneralDao<>(Actors.class);
 private auth au = new auth();
+     //=================== nicole
+private Dog dog = new Dog();
+private GeneralDao<Dog> dogDao = new GeneralDao<>(Dog.class);
+private Vaccination vac = new Vaccination();
+private GeneralDao<Vaccination> vacDao = new GeneralDao<>(Vaccination.class);
+private Disease dis = new Disease();
+private GeneralDao<Disease> disDao = new GeneralDao<>(Disease.class);
+ //====================      
+        
 
     public Actors getMn() {
         return mn;
@@ -60,7 +69,34 @@ private auth au = new auth();
    return "signup";
    }
     
+//===========================================
+    //getters by nicole
 
+    public Dog getDog() {
+        return dog;
+    }
+
+    public List<Dog> getDogDao() {
+        return dogDao.listAll();
+    }
+
+    public Vaccination getVac() {
+        return vac;
+    }
+
+    public List<Vaccination> getVacDao() {
+        return vacDao.listAll();
+    }
+
+    public Disease getDis() {
+        return dis;
+    }
+
+    public List<Disease> getDisDao() {
+        return disDao.listAll();
+    }
+    
+   //=========================== 
     
    public String ULogin(){
         try {
