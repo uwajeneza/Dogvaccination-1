@@ -30,18 +30,21 @@ import javax.faces.context.FacesContext;
 @ManagedBean(name = "mail")
 public class Mail {
     
+    
      private Actor mail = new Actor();
      private GeneralDao<Actor> mailDao = new GeneralDao<>(Actor.class);
        
      private String names;
-     private int phone;
+     private String phone;
      private String Email;
      private String Subject;
 
     public Mail() {
     }
 
-    public Mail(String names, int phone, String Email, String Subject) {
+     
+     
+    public Mail(String names, String phone, String Email, String Subject) {
         this.names = names;
         this.phone = phone;
         this.Email = Email;
@@ -56,11 +59,11 @@ public class Mail {
         this.names = names;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
@@ -80,6 +83,7 @@ public class Mail {
         this.Subject = Subject;
     }
 
+    
      
 
     

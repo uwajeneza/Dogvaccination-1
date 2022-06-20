@@ -76,17 +76,22 @@
             <h:form>
             <div class="contact_form-container">
               <div>
+                  
                 <div>
+                    <h:outputLabel value="Names:"/>
                     <h:inputText value="#{mail.names}"  label="Names" required="true" requiredMessage="fill Names"/>
                 </div>
                 <div>
+                     <h:outputLabel value="Phone :"/>
                     <h:inputText value="#{mail.phone}"  label="Phone Number" requiredMessage="fill Phone" />
                 </div>
                 <div>
+                    <h:outputLabel value="Email:"/>
                     <h:inputText value="#{mail.email}"  label="Email" />
                 </div>
 
                 <div class="mt-5">
+                    <h:outputLabel value="Message:"/>
                     <h:inputText value="#{mail.subject}"  label="Message" requiredMessage="fill message"/>
                 </div>
                 <div class="mt-5">
