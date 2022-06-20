@@ -25,6 +25,14 @@ public class MainClass {
 private Actor mn  = new Actor();
 private GeneralDao<Actor> mnDao = new GeneralDao<>(Actor.class);
 private auth au = new auth();
+    //===================
+private Dog dog = new Dog();
+private GeneralDao<Dog> dogDao = new GeneralDao<>(Dog.class);
+private Vaccination vac = new Vaccination();
+private GeneralDao<Vaccination> vacDao = new GeneralDao<>(Vaccination.class);
+private Disease dis = new Disease();
+private GeneralDao<Disease> disDao = new GeneralDao<>(Disease.class);
+ //====================  
 
     public Actor getMn() {
         return mn;
@@ -71,7 +79,125 @@ private auth au = new auth();
     
    
    }
-    
+    //===========================================
+    //getters by nicole
+
+    public Dog getDog() {
+        return dog;
+    }
+
+    public List<Dog> getDogDao() {
+        return dogDao.listAll();
+    }
+
+    public Vaccination getVac() {
+        return vac;
+    }
+
+    public List<Vaccination> getVacDao() {
+        return vacDao.listAll();
+    }
+
+    public Disease getDis() {
+        return dis;
+    }
+
+    public List<Disease> getDisDao() {
+        return disDao.listAll();
+    }
+    //======Save;delete and update
+     public String save(){
+        try{
+     disDao.create(dis);
+     
+     return "Dog";
+        }
+        
+        catch (Exception e){
+            return "Disease";
+            
+        }
+     
+     }
+      public String create(){
+        try{
+     vacDao.create(vac);
+     
+     return "Vaccination";
+        }
+        
+        catch (Exception e){
+            return "Dog";
+            
+        }
+     
+     }
+      public String Save(){
+        try{
+     dogDao.create(dog);
+     
+     return "Dog";
+        }
+        
+        catch (Exception e){
+            return "Home";
+            
+        }
+     
+     }
+      
+       public String update(){
+        try{
+     disDao.update(dis);
+     
+     return "Dog";
+        }
+        
+        catch (Exception e){
+            return "Disease";
+            
+        }
+     
+     }
+      public String Update(){
+        try{
+     vacDao.update(vac);
+     
+     return "Vaccination";
+        }
+        
+        catch (Exception e){
+            return "Dog";
+            
+        }
+     
+     }
+      public String UPdate(){
+        try{
+     dogDao.update(dog);
+     
+     return "Dog";
+        }
+        
+        catch (Exception e){
+            return "Home";
+            
+        }
+     
+     }
+      public String delete (Dog dog){
+          dogDao.delete(dog);
+      return "Dog";
+      }
+       public String del (Vaccination vac){
+          vacDao.delete(vac);
+      return "Vaccination";
+      }
+        public String deet(Disease dis){
+          disDao.delete(dis);
+      return "Disease";
+      }
+   //=========================== 
 
     
    public String ULogin(){
