@@ -1,12 +1,36 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <h:head>
-        <title>Facelet Title</title>
-    </h:head>
-    <h:body>
-        Hello from Facelets
-    </h:body>
-</html>
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>SAVE  </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <div><h1>SAVE DOG</h1> </div>
+        <f:view>
 
+
+            <h:form>
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="DogId:" for="dogId" />
+                    <h:inputText id="dogId" value="#{Main.dog.dogId}" title="DogId" />
+                    <h:outputLabel value="DogNames:" for="dogNames" />
+                    <h:inputText id="dogNames" value="#{Main.dog.dogNames}" title="DogNames" />
+                    <h:outputLabel value="DogDob:" for="dogDob" />
+                    <h:inputText id="dogDob" value="#{Main.dog.dogDob}" title="DogDob" />
+                    <h:outputLabel value="Regdog:" for="regdog" />
+                    <h:inputText id="regdog" value="#{Main.dog.regdog}" title="Regdog" />
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+
+    </body>
+</html>
